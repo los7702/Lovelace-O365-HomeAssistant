@@ -23,7 +23,7 @@ import {
         return html`
             <ha-card outlined header="${this.config.title}">
             <ha-navigation-list hassecondary>
-            <mwc-list>
+            
             ${this.hass.states[this.config.entity].attributes.all_tasks.map(ent => {
                 let compdate =  new Date();
                 compdate.setDate(compdate.getDate() - 1);
@@ -49,7 +49,7 @@ import {
                 return thtml
                 }
             })}
-            </mwc-list>
+            
             </ha-navigation-list>
             </<ha-config-navigation>
             </ha-card>
